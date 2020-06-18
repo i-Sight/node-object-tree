@@ -1,4 +1,25 @@
+os: linux
+dist: xenial
 language: node_js
 node_js:
-  - "0.11"
-  - "0.10"
+  - "14"
+  - "10"
+git:
+  depth: 3
+cache:
+  yarn: true
+  directories:
+    - node_modules
+before_install:
+  - npm -g install yarn@1.21.1
+install:
+  - yarn --frozen-lockfile
+notifications:
+  slack:
+    rooms:
+      secure: IyKJpQgyzXKCANdbRWy6XBf8Z6PmLuy+i1w6msqTJI2FLE4RLSHe9yEZGsZ/l6UQ4rAPR1CfRUPc9R35zQSV9/q4Mqg5zVqKDIrUhwEd3Wvaw9kGBpK8Ygxj0GaEJfEwZlua31/rrDlJXnacE8yo1CVcIacqwifJ9KxHhYL4s1A=
+    on_success: change
+    on_failure: change
+    on_error: always
+    on_cancel: never
+    on_start: never
