@@ -22,9 +22,9 @@
   },
   "homepage": "https://github.com/nherment/node-object-tree",
   "dependencies": {
-    "lodash": "2.4.1"
+    "lodash": "4.17.15"
   },
   "devDependencies": {
-    "mocha": "1.17.1"
+    "mocha": "8.0.1"
   }
 }
