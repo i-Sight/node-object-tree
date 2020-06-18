@@ -6,6 +6,10 @@
   "scripts": {
     "test": "./node_modules/.bin/mocha test --reporter spec"
   },
+  "engines": {
+    "node": ">=10",
+    "yarn": ">=1.21"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/nherment/node-object-tree.git"
